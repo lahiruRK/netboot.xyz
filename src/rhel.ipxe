@@ -40,7 +40,7 @@ isset ${rhel_base_url} && goto boot || echo URL not set... && goto url_set
 
 :boot
 imgfree
-kernel ${rhel_base_url}/images/pxeboot/vmlinuz repo=${rhel_base_url}/os/${rhel_arch} ${console} initrd=initrd.img
+kernel ${rhel_base_url}/images/pxeboot/vmlinuz repo=${rhel_base_url} ${console} initrd=initrd.img
 initrd ${rhel_base_url}/images/pxeboot/initrd.img
 md5sum vmlinuz initrd.img
 boot
