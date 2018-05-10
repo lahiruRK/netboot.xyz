@@ -29,8 +29,8 @@ echo
 echo -n URL: ${} && read rhel_base_url
 echo
 echo netboot.xyz will attempt to load the following files:
-echo ${rhel_base_url}/os/${rhel_arch}/images/pxeboot/vmlinuz
-echo ${rhel_base_url}/os/${rhel_arch}/images/pxeboot/initrd.img
+echo ${rhel_base_url}/images/pxeboot/vmlinuz
+echo ${rhel_base_url}/images/pxeboot/initrd.img
 echo
 prompt Press any key to return to RHEL Menu...
 goto rhel
