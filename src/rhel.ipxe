@@ -40,8 +40,8 @@ isset ${rhel_base_url} && goto boot || echo URL not set... && goto url_set
 
 :boot
 imgfree
-kernel ${rhel_base_url}/images/pxeboot/vmlinuz repo=${rhel_base_url} ks=${rhel_base_url}/anaconda.ks ${console} initrd=initrd.img
-#kernel   network ksdevice=bootif BOOTIF=01-${netX/mac}
+#kernel ${rhel_base_url}/images/pxeboot/vmlinuz repo=${rhel_base_url} ks=${rhel_base_url}/anaconda.ks ${console} initrd=initrd.img
+kernel   network ksdevice=bootif BOOTIF=01-${netX/mac}
 initrd ${rhel_base_url}/images/pxeboot/initrd.img
 md5sum vmlinuz initrd.img
 boot
